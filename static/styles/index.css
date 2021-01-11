@@ -98,7 +98,8 @@ footer {
 
 .section1 {
   min-height: 60vh;
-  border-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
   background: #fff455;
 }
 
@@ -207,10 +208,10 @@ footer {
   border-radius: 50%;
   display: inline-block;
   position: absolute;
-  left: 50%;
+  right: 2rem;
   top: 0;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   border: 0.8rem solid #006875;
   overflow: hidden;
 }
@@ -307,7 +308,7 @@ footer {
 }
 
 .section3 .posts2 {
-  background-color: #d6b437;
+  background-color: #ffda55;
 }
 
 .section3 .posts3 {

@@ -98,7 +98,8 @@ footer {
 
 .section1 {
   min-height: 6rem;
-  border-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
   background: #fff455;
 }
 

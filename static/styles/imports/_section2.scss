@@ -26,9 +26,9 @@
                 border-radius: 50%;
                 display: inline-block;
                 position: absolute;
-                left: 50%;
+                right: 2rem;
                 top: 0;
-                transform: translate(-50%, -50%);
+                transform: translate( 0, -50%);
                 border: 0.8rem solid $primaryB;
                 overflow: hidden;
 
