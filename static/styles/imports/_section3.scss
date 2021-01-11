@@ -1,6 +1,9 @@
 .section3{
     margin: 7rem 0;
     padding: 0 2rem;
+    @include breakpoint-down(small){
+        padding:  1rem 0;
+    }
 
     .posts{
         height: 20rem;
@@ -10,14 +13,38 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        overflow: hidden;
+        padding: 2rem 0;
+        @include breakpoint-down(medium){
+            height: auto;
+        }
+        @include breakpoint-down(small){
+            flex-flow: row wrap;
+            justify-content: center;
+            padding:  2rem 0;
+        }
         .content{
             height: auto;
             padding: 2rem ;
+            
             h1{
                 margin: 0 0 1.5rem 0;
+                @include breakpoint-down(medium){
+                    font-size: 1.8rem;
+                    margin: 0 0 0.5rem 0;
+                    font-weight: 600;
+                }
+              
             }
             p{
                 margin: 1.5rem 0;
+                @include breakpoint-down(medium){
+                    font-size: 1.6rem;
+                    margin: 0 0 1.3rem 0;
+                }
+                @include breakpoint-down(small){
+                    padding:0 0  1.5rem 0;
+                }
             }
             a.trans {
                 transition: all 0.5s;
@@ -27,6 +54,12 @@
             display: inline-block;
             height: 16rem;
             transition: all 0.5s;
+            @include breakpoint-down(medium){
+                height: 8rem;
+            }
+            @include breakpoint-down(small){
+                width:  100%;
+            }
         }
         &:hover img{
             transform: translateX(-2rem);

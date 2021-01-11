@@ -11,3 +11,24 @@
         min-height: 100vh;
     }
 }
+
+
+
+
+
+
+
+
+
+// togglers
+.hide_for_mobiles{
+    @include breakpoint-down(large){
+        display: none ;
+    }
+}
+
+.hide_for_desktops{
+    @include breakpoint-up(medium){
+        display: none;
+    }
+}

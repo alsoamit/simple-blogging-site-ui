@@ -97,10 +97,10 @@ footer {
 }
 
 .section1 {
-  min-height: 60vh;
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
-  background: #fff455;
+  background: #ffd755;
+  height: auto;
 }
 
 .section1 nav {
@@ -127,14 +127,34 @@ footer {
   margin: 0 0.5rem;
 }
 
+.section1 nav .hamburger {
+  width: 2.6rem;
+  height: 2.5rem;
+}
+
+.section1 nav .hamburger span {
+  background-color: #111;
+  display: block;
+  height: 0.3rem;
+  margin: 0.5rem 0;
+}
+
 .section1 .intro {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[8];
       grid-template-columns: repeat(8, 1fr);
       grid-template-areas: '. t t t i i i .';
-  min-height: 30rem;
-  margin: 8rem 0 0 0;
+  padding: 8rem 0 0;
+}
+
+@media (max-width: 599px) {
+  .section1 .intro {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 't t t t ';
+    padding: 5rem 3rem 6rem 3rem;
+  }
 }
 
 .section1 .intro .text {
@@ -161,17 +181,23 @@ footer {
   grid-area: i;
 }
 
+@media (max-width: 599px) {
+  .section1 .intro .illustration {
+    display: none;
+  }
+}
+
 .section1 .intro .illustration img {
   display: inline-block;
-  height: 100%;
-  width: 100%;
+  height: 95%;
+  width: auto;
   min-height: 20rem;
   max-height: 30rem;
 }
 
 .section2 {
   margin: 7rem 0 0 0;
-  padding: 4rem;
+  padding: 0  4rem;
   display: -ms-grid;
   display: grid;
   grid-auto-rows: 30rem;
@@ -183,9 +209,40 @@ footer {
           align-items: flex-end;
 }
 
+@media (max-width: 979px) {
+  .section2 {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    grid-auto-rows: 35rem;
+    padding: 2rem;
+    grid-auto-rows: 45rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .section2 {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    grid-auto-rows: 35rem;
+    padding: 2rem;
+    grid-auto-rows: 45rem;
+  }
+}
+
+@media (max-width: 399px) {
+  .section2 {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    padding: 0 0.5rem;
+  }
+}
+
 .section2 .qm {
   height: 90%;
-  background-color: #fff455;
+  background-color: #ffd755;
   border-radius: 1rem;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -220,6 +277,8 @@ footer {
   display: inline-block;
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .section2 .qm .ppLogo {
@@ -236,12 +295,15 @@ footer {
   display: inline-block;
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .section2 .qm .ppDetails {
   height: 38%;
   width: 100%;
   padding: 1rem;
+  overflow: hidden;
 }
 
 .section2 .qm .ppDetails .heading {
@@ -251,6 +313,12 @@ footer {
 .section3 {
   margin: 7rem 0;
   padding: 0 2rem;
+}
+
+@media (max-width: 399px) {
+  .section3 {
+    padding: 1rem 0;
+  }
 }
 
 .section3 .posts {
@@ -267,6 +335,27 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+@media (max-width: 599px) {
+  .section3 .posts {
+    height: auto;
+  }
+}
+
+@media (max-width: 399px) {
+  .section3 .posts {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 2rem 0;
+  }
 }
 
 .section3 .posts .content {
@@ -278,8 +367,29 @@ footer {
   margin: 0 0 1.5rem 0;
 }
 
+@media (max-width: 599px) {
+  .section3 .posts .content h1 {
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+  }
+}
+
 .section3 .posts .content p {
   margin: 1.5rem 0;
+}
+
+@media (max-width: 599px) {
+  .section3 .posts .content p {
+    font-size: 1.6rem;
+    margin: 0 0 1.3rem 0;
+  }
+}
+
+@media (max-width: 399px) {
+  .section3 .posts .content p {
+    padding: 0 0  1.5rem 0;
+  }
 }
 
 .section3 .posts .content a.trans {
@@ -292,6 +402,18 @@ footer {
   height: 16rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+@media (max-width: 599px) {
+  .section3 .posts img {
+    height: 8rem;
+  }
+}
+
+@media (max-width: 399px) {
+  .section3 .posts img {
+    width: 100%;
+  }
 }
 
 .section3 .posts:hover img {
@@ -329,6 +451,18 @@ footer {
         grid-template-areas: 'h' 'c';
     width: 100%;
     min-height: 100vh;
+  }
+}
+
+@media (max-width: 979px) {
+  .hide_for_mobiles {
+    display: none;
+  }
+}
+
+@media (min-width: 980px) {
+  .hide_for_desktops {
+    display: none;
   }
 }
 /*# sourceMappingURL=index.css.map */

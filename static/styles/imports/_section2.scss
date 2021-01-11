@@ -1,13 +1,32 @@
 
     .section2{
         margin: 7rem 0 0 0;
-        padding: 4rem;
+        padding:0  4rem;
         display: grid;
         grid-auto-rows: 30rem;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 3rem;
         align-items: flex-end;
-
+        @include breakpoint-down(large){
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
+            grid-auto-rows: 35rem;
+            padding: 2rem;
+            grid-auto-rows: 45rem;
+        }
+        @include breakpoint-down(medium){
+            grid-template-columns: 1fr;
+            grid-gap: 1rem;
+            grid-auto-rows: 35rem;
+            padding: 2rem;
+            grid-auto-rows: 45rem;
+        }
+        @include breakpoint-down(small){
+            grid-template-columns: 1fr;
+            grid-gap: 2rem;
+            //grid-auto-rows: 35rem;
+            padding: 0 0.5rem;
+        }
         .qm{
             height: 90%;
             background-color: $secondaryB;
@@ -36,6 +55,7 @@
                     display: inline-block;
                     height: 100%;
                     width: 100%;
+                    object-fit: cover;
                 }
             }
 
@@ -51,12 +71,14 @@
                     display: inline-block;
                     height: 100%;
                     width: 100%;
+                    object-fit: cover;
                 }
             }
             .ppDetails{
                 height: 38%;
                 width: 100%;
                 padding: 1rem;
+                overflow: hidden;
                 .heading{
                     padding-bottom: 0.7rem;
                 }
