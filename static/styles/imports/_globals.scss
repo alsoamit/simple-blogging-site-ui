@@ -1,0 +1,38 @@
+body{
+    min-height: 100vh;
+    background: $primaryB;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.container{
+    max-width: 120rem;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+
+}
+   
+footer{
+    min-height: 40rem;
+    background-color: #222;
+}
+
+.cta{
+    background-color: $tertiaryB;
+    height: 3.5rem;
+    min-width: 6rem;
+    border-radius: 2rem;
+    display: inline-flex;
+    padding: 0 2rem;
+    justify-content: center;
+    align-items: center;
+    color: $cta;
+    cursor: pointer;
+    box-shadow: $bs3;
+}
+
+.widetxt {
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+}

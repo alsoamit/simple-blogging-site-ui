@@ -1,0 +1,112 @@
+
+    .section2{
+        margin: 10rem 0;
+        line-height: 1.8em;
+        .qm{
+            background-color: $secondaryB;
+            border-radius: 0.5rem;
+            box-shadow: $bs1;
+            transition: all 0.5s;
+            position: relative;
+            cursor: pointer;
+            font-size: 1.8rem;
+            
+            .profile{
+                height: 15rem;
+                width: 15rem;
+                background: linear-gradient(to right, orange, red);
+                border-radius: 50%;
+                display: inline-block;
+                position: absolute;
+                right: 2rem;
+                top: 0;
+                transform: translate(0, -50%);
+                border: 1.8rem solid $primaryB;
+                overflow: hidden;
+
+                img{
+                    display: inline-block;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .ppLogo{
+                height: 60%;
+                width: 100%;
+                background: linear-gradient(to right, rgb(95, 7, 7), rgb(0, 0, 0));
+                overflow: hidden;
+                border-top-left-radius: 0.5rem;
+                border-top-right-radius: 0.5rem;
+
+                img{
+                    display: inline-block;
+                    width: 100%;
+                    max-height: 40rem;
+                }
+            }
+            .ppDetails{
+                height: 38%;
+                width: 100%;
+                padding: 1rem;
+                display: grid;
+                    grid-template-columns: repeat(12, 1fr);
+                    grid-template-rows: auto;
+                    grid-template-areas:'. h h h h h h h h . . .' '. p p p p p p p p p p .' '. pi pi pi pi pi pi pi pi pi pi .' '. ip ip ip ip ip ip ip ip ip ip .' '. f f f f f f f f f f .';  
+                .heading{
+
+                    padding: 4rem 0 2rem 0;
+                    font-size: 3rem;
+                    grid-area: h;
+                }
+                .para{
+                        grid-area: p;
+                        text-indent: 10rem;
+                        margin: 2rem 0;
+                }
+                .paraImg{
+                    grid-area: pi;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-between;
+                    margin: 2.5rem 0;
+                    .i {
+                        width: 50%;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .p{
+                        width: 50%;
+                        padding-right: 3rem;
+                    }
+                }
+                .imgPara{
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-between;
+                    grid-area: ip;
+                    margin: 2.5rem 0;
+                    .i {
+                        width: 50%;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .p{
+                        width: 50%;
+                        padding-left: 3rem;
+                    }
+                }
+                .fullImg{
+                    margin: 2.5rem 0;
+                    grid-area: f;
+                    img{
+                        width: 100%;
+                        max-width: 100%;
+                        max-height: 40rem;
+                    }
+                }
+            }
+        }
+    }

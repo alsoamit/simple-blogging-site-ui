@@ -1,0 +1,32 @@
+.section1{
+    min-height: 6rem;
+    border-radius: 0.5rem;
+    background: $secondaryB;
+
+    nav{
+        height: 6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+
+        .logo{
+
+            img{
+                display: inline-block;
+                height: 6rem;
+            }
+          
+        }
+
+        .links{
+
+            a{
+                text-transform: uppercase;
+                margin: 0 0.5rem;
+            }
+
+        }
+    }
+
+}

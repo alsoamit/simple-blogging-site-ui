@@ -1,0 +1,65 @@
+.section1{
+    min-height: 60vh;
+    border-radius: 0.5rem;
+    background: $secondaryB;
+
+    nav{
+        height: 6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+
+        .logo{
+
+            img{
+                display: inline-block;
+                height: 6rem;
+            }
+          
+        }
+
+        .links{
+
+            a{
+                text-transform: uppercase;
+                margin: 0 0.5rem;
+            }
+
+        }
+    }
+
+    .intro{
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas: '. t t t i i i .';    
+        min-height: 30rem;
+        margin: 8rem 0 0 0;
+        
+        .text{
+            grid-area: t;
+            height: 100%;
+
+            h1{
+                font-size: $large;
+                margin: 1rem 1rem 3rem 0;
+            }
+
+            .cta{
+                margin: 1rem 0 ;
+            }
+        }
+
+        .illustration{
+            grid-area: i;
+
+            img{
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+                min-height: 20rem;
+                max-height: 30rem;
+            }
+        }
+    }
+}
