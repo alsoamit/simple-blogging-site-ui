@@ -1,5 +1,5 @@
 .section1{
-    min-height: 6rem;
+    height: 6rem;
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     background: $secondaryB;
@@ -10,7 +10,10 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 2rem;
-
+        @include breakpoint-down(small){
+            padding: 0 1rem;
+        }
+        
         .logo{
 
             img{
@@ -27,6 +30,17 @@
                 margin: 0 0.5rem;
             }
 
+        }
+        
+        .hamburger{
+            width: 2.6rem;
+            height: 2.5rem;
+            span{
+                background-color: #111;
+                display: block;
+                height: 0.3rem;
+                margin: 0.5rem 0;
+            }
         }
     }
 

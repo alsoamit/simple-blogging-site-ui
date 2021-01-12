@@ -51,11 +51,18 @@ $btnP : #c9c449;
 $large : 4rem;
 
 //box shadows
-$bs1 :  rgba(0, 0, 0, 0.24) 0px 3px 8px;
+$bs1 :   3px 3px 20px rgba(0, 0, 0, .5);
 $bs2 :  rgb(0, 0, 0) 0px 20px 30px -10px;
 $bs3:  rgba(0, 0, 0, 0.16) 0px 1px 4px;
-
+$fourthB : #001C21;
 //tertiary colors 
 $tert1 : #3fbbb5;
 $tert2 : #ffda55;
 $tert3 : #292B37;
+
+//overlays 
+$overlay1: #ffd755d8;
+
+// font family 
+$font1 :'Montserrat', sans-serif;
+$font2: 'Yusei Magic', sans-serif;

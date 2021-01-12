@@ -1,24 +1,3 @@
-@media screen and(max-width: 600px){
-    body{
-        height: auto;
-        padding: 0.5rem;
-    }
-    .box{
-        grid-template-columns: auto;
-        grid-template-rows: auto auto;
-        grid-template-areas: 'h' 'c';
-        width: 100%;
-        min-height: 100vh;
-    }
-}
-
-
-
-
-
-
-
-
 
 // togglers
 .hide_for_mobiles{

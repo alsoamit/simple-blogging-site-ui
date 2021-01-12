@@ -17,11 +17,14 @@
         padding: 2rem 0;
         @include breakpoint-down(medium){
             height: auto;
+            padding: 0;
+            border-radius: 0;
         }
         @include breakpoint-down(small){
             flex-flow: row wrap;
             justify-content: center;
-            padding:  2rem 0;
+            padding: 0;
+            border-radius: 0;
         }
         .content{
             height: auto;

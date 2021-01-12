@@ -3,6 +3,7 @@
     border-bottom-left-radius: 0.5rem;
     background: $secondaryB;
     height: auto;
+    overflow: hidden;
     
     nav{
         height: 6rem;
@@ -10,6 +11,9 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 2rem;
+        @include breakpoint-down(small){
+            padding: 0 1rem;
+        }
         
         .logo{
             
@@ -47,9 +51,8 @@
         grid-template-areas: '. t t t i i i .';    
         padding: 8rem 0 0;
         @include breakpoint-down(medium){
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-areas: 't t t t '; 
-            padding: 5rem 3rem 6rem 3rem;
+            display: block;
+            padding: 8rem 2.5rem;
         }
         .text{
             
@@ -58,7 +61,8 @@
             
             h1{
                 font-size: $large;
-                margin: 1rem 1rem 3rem 0;
+                margin: 1rem 1rem 2rem 0;
+                font-family: $font2;
             }
             
             .cta{

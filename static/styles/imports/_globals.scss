@@ -1,7 +1,7 @@
 body {
     min-height: 100vh;
     background: $primaryB;
-    font-family: 'Maven Pro', sans-serif;
+    font-family: $font1;
 }
 
 .container {
@@ -14,7 +14,7 @@ body {
 
 footer {
     min-height: 40rem;
-    background-color: #222;
+    background-color: $fourthB;
 }
 
 .cta {
@@ -31,7 +31,26 @@ footer {
     box-shadow: $bs3;
 }
 
+.blog__link {
+    background-color: $secondaryB;
+    height: 3.5rem;
+    min-width: 6rem;
+    border-radius: 2rem;
+    display: inline-flex;
+    padding: 0 2rem;
+    justify-content: center;
+    align-items: center;
+    color: $cta;
+    cursor: pointer;
+    box-shadow: $bs3;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate( -50%, 0);
+}
+
 .widetxt {
     letter-spacing: 0.3rem;
     text-transform: uppercase;
 }
+
