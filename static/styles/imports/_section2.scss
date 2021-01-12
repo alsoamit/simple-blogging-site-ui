@@ -9,6 +9,9 @@
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
      grid-gap: 2rem;
+     @include breakpoint-down(medium){
+        display: block;
+     }
 
     .card{
         border-radius: 1rem;
@@ -18,6 +21,14 @@
         max-width: 40rem;
         min-height: 42rem;
         margin: 3rem 0;
+
+        @include breakpoint-down(medium){
+            margin: 6rem auto;
+         }
+
+        @include breakpoint-down(small){
+            min-height: 45rem;
+         }
 
         &:hover{
             box-shadow: $bs2;
@@ -85,7 +96,7 @@
             .heading{
                 padding: 0 0 2rem 0;
                 font-size: 1.9rem;
-                font-weight: 400;
+                font-weight: 600;
                 font-family: $font2;
             }
 

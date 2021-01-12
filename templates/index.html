@@ -6,12 +6,35 @@
     <title>blogger bee</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&family=Yusei+Magic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../static/styles/index.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
         <section class="section section1" id="section1">
+            <div id="menu" class="invisible">
+                <div class="links">
+                    <a href="./index.html">HOME</a>
+                    <a href="./blogs.html">BLOGS</a>
+                    <a href="#">stories</a>
+                    <a href="#">AUThORS</a>
+                    <a href="#">ABOUT</a>
+                    <div class="themes">
+                        <p class="widetxt">
+                            themes
+                        </p>
+                        <div class="switches">
+                            <div class="switch switch1"></div>
+                            <div class="switch switch2"></div>
+                            <div class="switch switch3"></div>
+                            <div class="switch switch4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <nav>
                 <div class="logo">
                     <a href="./index.html">
@@ -29,7 +52,7 @@
                 <div class="cta hide_for_mobiles">
                     login or signup
                 </div>
-                <div class="hamburger hide_for_desktops">
+                <div class="hamburger hide_for_desktops" id="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -273,7 +296,10 @@
         
     </div>
     <footer>
-        
+        <div class="widetxt">
+            designed and maintained by alsoamit
+        </div>
     </footer>
+    <script src="./../static/scripts/index.js"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@ body {
     min-height: 100vh;
     background: $primaryB;
     font-family: $font1;
+    
+
 }
 
 .container {
@@ -54,3 +56,8 @@ footer {
     text-transform: uppercase;
 }
 
+.invisible {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+}

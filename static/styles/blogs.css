@@ -122,6 +122,12 @@ footer {
   text-transform: uppercase;
 }
 
+.invisible {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
 .section1 {
   height: 6rem;
   border-bottom-right-radius: 0.5rem;
@@ -314,5 +320,124 @@ footer {
   .hide_for_desktops {
     display: none;
   }
+}
+
+.menu {
+  opacity: 1;
+  background-color: #006875;
+  z-index: 100;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transform: translate(-75%, 0%);
+          transform: translate(-75%, 0%);
+  -webkit-animation: dropDown 0.5s ease-out forwards;
+          animation: dropDown 0.5s ease-out forwards;
+  padding: 4rem 2rem 2rem;
+}
+
+@-webkit-keyframes dropDown {
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+@keyframes dropDown {
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+.menu .links {
+  height: 40vh;
+  width: 100%;
+  font-weight: 600;
+}
+
+.menu .links a {
+  display: block;
+  height: 5rem;
+  border-radius: 1rem;
+  background-color: #ffd755;
+  padding: 2rem;
+  margin: 2rem 0;
+  -webkit-transition: padding 0.3s;
+  transition: padding 0.3s;
+}
+
+.menu .links .themes {
+  min-height: 15rem;
+  width: 100%;
+  padding: 2rem 0;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: #ffd755;
+}
+
+.menu .links .themes .widetxt {
+  height: 3rem;
+}
+
+.menu .links .themes .switches {
+  margin: 2rem 0;
+  max-width: 50rem;
+  background-color: #006875;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.menu .links .themes .switches .switch {
+  height: 5rem;
+  width: 5rem;
+  border: 0.3rem solid black;
+  border-radius: 50%;
+  margin: 1rem;
+  background-color: white;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  cursor: pointer;
+}
+
+.menu .links .themes .switches .switch:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+}
+
+.menu .links .themes .switches .switch1 {
+  background-color: white;
+}
+
+.menu .links .themes .switches .switch2 {
+  background-color: black;
+  border-color: white;
+}
+
+.menu .links .themes .switches .switch3 {
+  background-color: #006875;
+}
+
+.menu .links .themes .switches .switch4 {
+  background-color: pink;
+}
+
+.menu__open {
+  position: fixed;
+  top: 0;
 }
 /*# sourceMappingURL=blogs.css.map */
