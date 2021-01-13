@@ -12,13 +12,8 @@
         align-items: center;
         padding: 0 2rem;
         
-     
-        
-        @include breakpoint-down(small){
-            padding: 0 1rem;
-        }
-        
         .logo{
+            padding: 0.8rem 0 0 0;
             
             img{
                 display: inline-block;
@@ -35,33 +30,33 @@
             }
             
         }
-
-
-        
+  
         .hamburger{
-            width: 2.6rem;
-            height: 2.5rem;
+            width: 3.4rem;
+            height: 3.5rem;
             cursor: pointer;
             z-index: 1000;
+            padding: 0.3rem;
+
             &__open {
                 
                 > span:first-child {
                     transform: rotate(45deg);
-                    transform-origin: 0.12rem 0.2rem;
+                    transform-origin: 4px 0.2px;
                 }
                 
                 > span:nth-child(2) {
                     opacity: 0;
                 }
                 
-                >span:last-child {
+                > span:last-child {
                     transform: rotate(-45deg);
-                    transform-origin: -0.1rem 0.1rem;
+                    transform-origin: -2px 1px;
                 }
             }
             
             span{
-                background-color: #111;
+                background-color: $hamb;
                 display: block;
                 height: 0.4rem;
                 margin: 0.5rem 0;
@@ -69,7 +64,6 @@
                 transition: transform 0.3s;
             }
         }
-        
     }
     
     .intro{

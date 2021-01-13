@@ -55,6 +55,7 @@ body {
   min-height: 100vh;
   background: #006875;
   font-family: "Montserrat", sans-serif;
+  color: black;
 }
 
 .container {
@@ -92,7 +93,7 @@ footer {
 }
 
 .blog__link {
-  background-color: #ffd755;
+  background-color: #ffffff;
   height: 3.5rem;
   min-width: 6rem;
   border-radius: 2rem;
@@ -133,6 +134,8 @@ footer {
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
   background: #ffd755;
+  height: auto;
+  overflow: hidden;
 }
 
 .section1 nav {
@@ -149,10 +152,8 @@ footer {
   padding: 0 2rem;
 }
 
-@media (max-width: 399px) {
-  .section1 nav {
-    padding: 0 1rem;
-  }
+.section1 nav .logo {
+  padding: 0.8rem 0 0 0;
 }
 
 .section1 nav .logo img {
@@ -166,15 +167,41 @@ footer {
 }
 
 .section1 nav .hamburger {
-  width: 2.6rem;
-  height: 2.5rem;
+  width: 3.4rem;
+  height: 3.5rem;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 0.3rem;
+}
+
+.section1 nav .hamburger__open > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 4px 0.2px;
+          transform-origin: 4px 0.2px;
+}
+
+.section1 nav .hamburger__open > span:nth-child(2) {
+  opacity: 0;
+}
+
+.section1 nav .hamburger__open > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: -2px 1px;
+          transform-origin: -2px 1px;
 }
 
 .section1 nav .hamburger span {
-  background-color: #111;
+  background-color: black;
   display: block;
-  height: 0.3rem;
+  height: 0.4rem;
   margin: 0.5rem 0;
+  border-radius: 2rem;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .section2 {
@@ -182,7 +209,7 @@ footer {
   line-height: 1.8em;
 }
 
-.section2 .qm {
+.section2 .card {
   background-color: #ffd755;
   border-radius: 0.5rem;
   -webkit-box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
@@ -190,11 +217,11 @@ footer {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   position: relative;
-  cursor: pointer;
   font-size: 1.8rem;
+  width: 100%;
 }
 
-.section2 .qm .profile {
+.section2 .card__logo {
   height: 15rem;
   width: 15rem;
   background: -webkit-gradient(linear, left top, right top, from(orange), to(red));
@@ -208,9 +235,10 @@ footer {
           transform: translate(0, -50%);
   border: 1.8rem solid #006875;
   overflow: hidden;
+  z-index: 4;
 }
 
-.section2 .qm .profile img {
+.section2 .card__logo img {
   display: inline-block;
   height: 100%;
   width: 100%;
@@ -218,7 +246,7 @@ footer {
      object-fit: cover;
 }
 
-.section2 .qm .ppLogo {
+.section2 .card__bg {
   height: 60%;
   width: 100%;
   background: -webkit-gradient(linear, left top, right top, from(#5f0707), to(black));
@@ -228,7 +256,7 @@ footer {
   border-top-right-radius: 0.5rem;
 }
 
-.section2 .qm .ppLogo img {
+.section2 .card__bg img {
   display: inline-block;
   width: 100%;
   max-height: 40rem;
@@ -236,109 +264,34 @@ footer {
      object-fit: cover;
 }
 
-.section2 .qm .ppDetails {
+.section2 .card__snippet {
   height: 38%;
   width: 100%;
   padding: 2rem 10rem;
 }
 
 @media (max-width: 599px) {
-  .section2 .qm .ppDetails {
+  .section2 .card__snippet {
     padding: 2rem 4rem;
   }
 }
 
 @media (max-width: 399px) {
-  .section2 .qm .ppDetails {
+  .section2 .card__snippet {
     padding: 2rem 1.5rem;
   }
 }
 
-.section2 .qm .ppDetails .heading {
+.section2 .card__snippet .heading {
   padding: 4rem 0 2rem 0;
   font-size: 3rem;
   grid-area: h;
 }
 
-.section2 .qm .ppDetails .para {
-  grid-area: p;
-  text-indent: 10rem;
-  margin: 2rem 0;
-}
-
-@media (max-width: 599px) {
-  .section2 .qm .ppDetails .para {
-    text-indent: 0;
-  }
-}
-
-.section2 .qm .ppDetails .paraImg {
-  grid-area: pi;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 2.5rem 0;
-}
-
-.section2 .qm .ppDetails .paraImg .i {
-  width: 50%;
-}
-
-.section2 .qm .ppDetails .paraImg .i img {
-  width: 100%;
-}
-
-.section2 .qm .ppDetails .paraImg .p {
-  width: 50%;
-  padding-right: 3rem;
-}
-
-.section2 .qm .ppDetails .imgPara {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  grid-area: ip;
-  margin: 2.5rem 0;
-}
-
-.section2 .qm .ppDetails .imgPara .i {
-  width: 50%;
-}
-
-.section2 .qm .ppDetails .imgPara .i img {
-  width: 100%;
-}
-
-.section2 .qm .ppDetails .imgPara .p {
-  width: 50%;
-  padding-left: 3rem;
-}
-
-.section2 .qm .ppDetails .fullImg {
-  margin: 2.5rem 0;
-  grid-area: f;
-}
-
-.section2 .qm .ppDetails .fullImg img {
-  width: 100%;
-  max-width: 100%;
-  max-height: 40rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+footer {
+  padding: 4rem 2rem;
+  color: #f7f7f7;
+  text-align: center;
 }
 
 @media (max-width: 979px) {
@@ -364,6 +317,7 @@ footer {
           transform: translate(-75%, 0%);
   -webkit-animation: dropDown 0.5s ease-out forwards;
           animation: dropDown 0.5s ease-out forwards;
+  overflow: auto;
   padding: 4rem 2rem 2rem;
 }
 
@@ -388,6 +342,7 @@ footer {
 }
 
 .menu .links a {
+  text-transform: uppercase;
   display: block;
   height: 5rem;
   border-radius: 1rem;
@@ -434,10 +389,9 @@ footer {
 .menu .links .themes .switches .switch {
   height: 5rem;
   width: 5rem;
-  border: 0.3rem solid black;
+  border: 2px solid black;
   border-radius: 50%;
   margin: 1rem;
-  background-color: white;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
@@ -460,11 +414,11 @@ footer {
 }
 
 .menu .links .themes .switches .switch3 {
-  background-color: #006875;
+  background-color: #00a700;
 }
 
 .menu .links .themes .switches .switch4 {
-  background-color: pink;
+  background-color: #008cff;
 }
 
 .menu__open {

@@ -2,8 +2,7 @@ body {
     min-height: 100vh;
     background: $primaryB;
     font-family: $font1;
-    
-
+    color: $clr;
 }
 
 .container {
@@ -34,7 +33,7 @@ footer {
 }
 
 .blog__link {
-    background-color: $secondaryB;
+    background-color: $tertiaryB;
     height: 3.5rem;
     min-width: 6rem;
     border-radius: 2rem;

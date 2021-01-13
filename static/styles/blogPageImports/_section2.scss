@@ -2,16 +2,16 @@
 .section2{
     margin: 10rem 0;
     line-height: 1.8em;
-    .qm{
+    .card {
         background-color: $secondaryB;
         border-radius: 0.5rem;
         box-shadow: $bs1;
         transition: all 0.5s;
         position: relative;
-        cursor: pointer;
         font-size: 1.8rem;
+        width: 100%;
         
-        .profile{
+        &__logo{
             height: 15rem;
             width: 15rem;
             background: linear-gradient(to right, orange, red);
@@ -23,6 +23,7 @@
             transform: translate(0, -50%);
             border: 1.8rem solid $primaryB;
             overflow: hidden;
+            z-index: 4;
             
             img{
                 display: inline-block;
@@ -32,7 +33,7 @@
             }
         }
         
-        .ppLogo{
+        &__bg{
             height: 60%;
             width: 100%;
             background: linear-gradient(to right, rgb(95, 7, 7), rgb(0, 0, 0));
@@ -47,7 +48,8 @@
                 object-fit: cover;
             }
         }
-        .ppDetails{
+        
+        &__snippet{
             height: 38%;
             width: 100%;
             padding: 2rem 10rem;
@@ -64,58 +66,7 @@
                 font-size: 3rem;
                 grid-area: h;
             }
-            .para{
-                grid-area: p;
-                text-indent: 10rem;
-                margin: 2rem 0;
-                @include breakpoint-down(medium){
-                    text-indent: 0;
-                }
-            }
-            .paraImg{
-                grid-area: pi;
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: space-between;
-                margin: 2.5rem 0;
-                .i {
-                    width: 50%;
-                    img{
-                        width: 100%;
-                    }
-                }
-                .p{
-                    width: 50%;
-                    padding-right: 3rem;
-                }
-            }
-            .imgPara{
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: space-between;
-                grid-area: ip;
-                margin: 2.5rem 0;
-                .i {
-                    width: 50%;
-                    img{
-                        width: 100%;
-                    }
-                }
-                .p{
-                    width: 50%;
-                    padding-left: 3rem;
-                }
-            }
-            .fullImg{
-                margin: 2.5rem 0;
-                grid-area: f;
-                img{
-                    width: 100%;
-                    max-width: 100%;
-                    max-height: 40rem;
-                    object-fit: cover;
-                }
-            }
+
         }
     }
 }

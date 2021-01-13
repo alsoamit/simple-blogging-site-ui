@@ -24,6 +24,7 @@
     height: 100vh;
     transform: translate(-75%, 0%);
     animation: dropDown 0.5s ease-out forwards;
+    overflow: auto;
     @keyframes dropDown {
         100%{
             transform: translate(0%, 0%);
@@ -35,6 +36,7 @@
         width: 100%;
         font-weight: 600;
         a {
+            text-transform:uppercase;
             display: block;
             height: 5rem;
             border-radius: 1rem;
@@ -68,10 +70,9 @@
                 .switch {
                     height: 5rem;
                     width: 5rem;
-                    border: 0.3rem solid black;
+                    border: 2px solid black;
                     border-radius: 50%;
                     margin: 1rem;
-                    background-color: white;
                     transition: transform 0.3s;
                     cursor: pointer;
 
@@ -86,15 +87,16 @@
 
                 .switch2 {
                     background-color: black;
-                    border-color: white;
+                    border-color: white ;
+                    
                 }
 
                 .switch3 {
-                    background-color: $primaryB;
+                    background-color: rgb(0, 167, 0);
                 }
 
                 .switch4 {
-                    background-color: pink;
+                    background-color: rgb(0, 140, 255);
                 }
             }
 

@@ -1,7 +1,7 @@
 console.log("Javascript is working for you");
 // functionality for theme switchers
-var themes = [ "../static/styles/indexLight.css",
-"../static/styles/indexDark.css","../static/styles/indexGreen.css", "../static/styles/index.css"
+var themes = [ "../static/styles/blogsLight.css",
+"../static/styles/blogsDark.css","../static/styles/blogsGreen.css", "../static/styles/blogs.css"
 ]
 
 var theme = localStorage.getItem('theme');
@@ -19,25 +19,6 @@ if (theme == "four"){
 }
 
 $(document).ready(function(){
-  console.log("Javascript is working for you");
-  // functionality for theme switchers
-  var themes = [ "../static/styles/indexLight.css",
-  "../static/styles/indexDark.css","../static/styles/indexGreen.css", "../static/styles/index.css"
-]
-
-var theme = localStorage.getItem('theme');
-if (theme == "one"){
-  $("#css").attr("href", themes[0]); 
-}
-if (theme == "two"){
-  $("#css").attr("href", themes[1]); 
-}
-if (theme == "three"){
-  $("#css").attr("href", themes[2]); 
-}
-if (theme == "four"){
-  $("#css").attr("href", themes[3]); 
-}
 
 // to open the hamburger
 $("#hamburger").click(function(){

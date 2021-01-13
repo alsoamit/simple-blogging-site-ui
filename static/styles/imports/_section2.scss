@@ -2,17 +2,12 @@
 .section2{
     margin: 7rem 0 0 0;
     padding: 0 2rem;
-/*     display: flex;
-    flex-flow: row wrap;
-    flex: 1 0 20rem;
-     */
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
      grid-gap: 2rem;
      @include breakpoint-down(medium){
         display: block;
      }
-
     .card{
         border-radius: 1rem;
         box-shadow: $bs1;
@@ -121,6 +116,5 @@
                 background-color: rgba(0, 0, 0, 0.192);
             }
         }
-        
     }
 }
